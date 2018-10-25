@@ -1,5 +1,14 @@
 version: 0.2
 
+env:
+  variables:
+    DB_HOST: "testdbinstance.crizmtwzkbbn.us-east-1.rds.amazonaws.com"
+    DB_USER: "appuser"
+    DB_NAME: "movie_db"
+    API_PORT: "3000"
+  parameter-store:
+    DB_PASS: "movie_db_pass"
+
 phases:
   pre_build:
     commands:
